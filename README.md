@@ -1,6 +1,6 @@
 # Contribution [#]: [Issue Title]
 
-**Contribution Number:** [1 / 2 / 3]
+**Contribution Number:**
 **Student:** Jesus Ballesteros
 **Issue:** [GitHub issue link]  
 **Status:** [Phase I / Phase II / Phase III / Phase IV] [In Progress / Complete]
