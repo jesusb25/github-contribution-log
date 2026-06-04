@@ -3,7 +3,7 @@
 **Contribution Number:** 1
 **Student:** Jesus Ballesteros
 **Issue:** [\[GitHub issue link\] ](https://github.com/novuhq/novu/issues/1478)
-**Status:** Phase I
+**Status:** Phase I Complete
 
 ---
 
