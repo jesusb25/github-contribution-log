@@ -1,15 +1,15 @@
 # Contribution [#]: [Issue Title]
 
-**Contribution Number:**
+**Contribution Number:** 1
 **Student:** Jesus Ballesteros
-**Issue:** [GitHub issue link]  
-**Status:** [Phase I / Phase II / Phase III / Phase IV] [In Progress / Complete]
+**Issue:** [\[GitHub issue link\] ](https://github.com/novuhq/novu/issues/1478)
+**Status:** Phase I
 
 ---
 
 ## Why I Chose This Issue
 
-[1-2 paragraphs explaining why this issue interests you, how it matches your skills/learning goals, what you hope to learn]
+This issue caught my attention because it uses both typescript and python which I have experience with. Also the project seems to be well maintained and has a good community. I am excited to contribute to an open source project and learn from the experience.
 
 ---
 
