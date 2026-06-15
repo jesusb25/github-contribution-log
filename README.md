@@ -1,4 +1,4 @@
-# Contribution [#]: Validate API inputs
+# Contribution #477: Validate API inputs
 
 **Contribution Number:** 1
 **Student:** Jesus Ballesteros
@@ -15,7 +15,7 @@ This issue validates user inputs to ensure they follow expected formats and type
 
 ### Problem Description
 
-Zimic does not fully validate the inputs of the public API, such as checking if the parameters are of the expected types. We currently rely mostly on TypeScript to report such problems to users. However, this allows invalid values to be passed at runtime, possibly causing unexpected behavior. Zimic should validate each input to make sure it is correct, either being of the correct type or part of an expected enum.
+Zimic does not fully validate the inputs of the public API, such as checking if the parameters are of the expected typesa. We currently rely m ostly on TypeScript to report such problems to users. However, this allows invalid values to be passed at runtime, possibly causing unexpected behavior. Zimic should validate each input to make sure it is correct, either being of the correct type or part of an expected enum.
 
 ### Expected Behavior
 
@@ -45,27 +45,25 @@ Issue is a feature request, so no specific environment setup is needed to reprod
 
 ### Reproduction Evidence
 
-- **Commit showing reproduction:** [Link to commit in your fork]
-- **Screenshots/logs:** [If applicable]
-- **My findings:** [What you discovered during reproduction]
-
----
+The github issue is a feature request, so no specific reproduction evidence is available. However, the issue can be observed by attempting to use the public API with invalid inputs and noting the system's response.
 
 ## Solution Approach
 
 ### Analysis
 
-[Your analysis of the root cause - what's causing the issue?]
+There is currently only basic validation in place, and it relies heavily on TypeScript's static type checking. This means that if a user bypasses TypeScript checks (e.g., by using JavaScript or through dynamic input), they can still provide invalid inputs that cause runtime errors. To address this, we need to implement runtime validation for all public API inputs.
 
 ### Proposed Solution
 
-[High-level description of your fix approach]
+1. Implement a validation layer that checks the types and formats of inputs at runtime.
+2. Use a validation library (e.g., `zod`, `yup`, or `joi`) to define schemas for expected inputs and validate against them.
+3. Ensure that clear and actionable error messages are returned when validation fails, indicating exactly what was wrong with the input.
 
 ### Implementation Plan
 
 Using UMPIRE framework (adapted):
 
-**Understand:** [Restate the problem]
+**Understand:** There is currently no runtime validation for public API inputs, which can lead to unpredictable behavior when invalid inputs are provided.
 
 **Match:** [What similar patterns/solutions exist in the codebase?]
 
