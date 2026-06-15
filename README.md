@@ -1,35 +1,33 @@
-# Contribution [#]: [Issue Title]
+# Contribution [#]: Validate API inputs
 
 **Contribution Number:** 1
 **Student:** Jesus Ballesteros
-**Issue:** [\[GitHub issue link\] ](https://github.com/novuhq/novu/issues/1478)
+**Issue:** [\[GitHub issue link\] ](https://github.com/issues/assigned?issue=zimicjs%7Czimic%7C477)
 **Status:** Phase I Complete
 
 ---
 
 ## Why I Chose This Issue
 
-This issue caught my attention because it uses both typescript and python which I have experience with. Also the project seems to be well maintained and has a good community. I am excited to contribute to an open source project and learn from the experience.
-
----
+This issue validates user inputs to ensure they follow expected formats and types. Since this is a public api this will help me dive into security and validation which is critical to large scale applications. I also want to learn how to write tests for validation logic and handle edge cases effectively.
 
 ## Understanding the Issue
 
 ### Problem Description
 
-[In your own words, what's broken or missing?]
+Zimic does not fully validate the inputs of the public API, such as checking if the parameters are of the expected types. We currently rely mostly on TypeScript to report such problems to users. However, this allows invalid values to be passed at runtime, possibly causing unexpected behavior. Zimic should validate each input to make sure it is correct, either being of the correct type or part of an expected enum.
 
 ### Expected Behavior
 
-[What should happen?]
+Users should receive clear error messages when they provide invalid inputs to the API, and the system should prevent any operations from proceeding with those invalid inputs.
 
 ### Current Behavior
 
-[What actually happens?]
+Currently, if a user provides an invalid input, the system may throw a runtime error or behave unpredictably, which can lead to a poor user experience and potential security vulnerabilities.
 
 ### Affected Components
 
-[Which parts of the codebase are involved?]
+public API input validation logic, error handling mechanisms, and potentially any components that rely on user inputs.
 
 ---
 
@@ -37,13 +35,13 @@ This issue caught my attention because it uses both typescript and python which 
 
 ### Environment Setup
 
-[Notes on setting up your local development environment - challenges you faced, how you solved them]
+Issue is a feature request, so no specific environment setup is needed to reproduce.
 
 ### Steps to Reproduce
 
-1. [Step 1]
-2. [Step 2]
-3. [Observed result]
+1. Attempt to call the public API with invalid inputs (e.g., wrong data types, missing required fields).
+2. Observe the system's response (e.g., error messages, crashes, or unexpected behavior).
+   Api documentation can be found [here](https://zimic.dev/docs/api).
 
 ### Reproduction Evidence
 
