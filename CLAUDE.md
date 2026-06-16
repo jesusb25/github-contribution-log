@@ -39,11 +39,3 @@ Every public API input should be validated to ensure it is the correct type or p
 ### API Docs
 
 https://zimic.dev/docs/api
-
----
-
-## Project Status
-
-**Phase I:** Complete (issue selected, codebase exploration underway)
-
-The README.md in this repo tracks the full contribution log including solution approach, testing strategy, implementation notes, and PR details.

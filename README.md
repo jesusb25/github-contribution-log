@@ -65,19 +65,52 @@ Using UMPIRE framework (adapted):
 
 **Understand:** There is currently no runtime validation for public API inputs, which can lead to unpredictable behavior when invalid inputs are provided.
 
-**Match:** [What similar patterns/solutions exist in the codebase?]
+**Match:** We can use a validation library like `zod` to define schemas for our API inputs and validate them at runtime. This will allow us to catch invalid inputs and provide clear error messages.
 
 **Plan:** [Step-by-step implementation plan]
 
-1. [Modify file X to do Y]
-2. [Add function Z]
-3. [Update tests]
+1. Validate api inputs using zod schemas for each public API endpoint.
+2. Integrate validation into the existing API handling logic.
+3. Ensure that error messages are clear and informative when validation fails.
+4. Write unit tests to cover various valid and invalid input scenarios.
+5. Create a PR for each endpoint's validation implementation and iterate based on feedback.
 
 **Implement:** [Link to your branch/commits as you work]
 
 **Review:** [Self-review checklist - does it follow the project's contribution guidelines?]
 
-**Evaluate:** [How will you verify it works?]
+### Branch & Commits
+
+- [ ] Branch was created from `canary` (not `main`)
+- [ ] Branch name follows the pattern `feat/477-validate-api-inputs`
+- [ ] All commit messages follow Conventional Commits format: `feat(http): ...`, `feat(fetch): ...`, `feat(interceptor): ...`
+- [ ] Commit messages use imperative mood and all lowercase (e.g. `feat(interceptor): validate inputs`)
+- [ ] No "closes #477" or issue links in commit messages (those belong in the PR description)
+
+### Pull Request
+
+- [ ] PR is opened against the `canary` branch
+- [ ] PR title follows the format: `feat(interceptor): validate api inputs (#477)`
+- [ ] PR description references the issue with "Closes #477"
+- [ ] Any changes beyond the issue scope are explicitly described in the PR body
+
+### Code Quality
+
+- [ ] TypeScript types pass: `pnpm turbo types:check --filter <package>`
+- [ ] Linting passes: `pnpm turbo lint:turbo --filter <package>`
+- [ ] Formatting passes: `pnpm style:check .`
+- [ ] Build succeeds: `pnpm turbo build --filter <package>`
+- [ ] No new mocks introduced with `vi.spyOn` or `vi.mock` unless absolutely necessary
+
+### Testing
+
+- [ ] Test files are in `__tests__` directories with `.test.ts` extension
+- [ ] Tests target public API behavior, not implementation details
+- [ ] Tests cover: valid inputs (happy path), invalid types, invalid enum values, boundary/edge cases
+- [ ] 100% test coverage maintained: `pnpm turbo test:turbo --filter <package>`
+- [ ] Tests are parametrized where Zimic supports multiple environments (Node.js/browser, local/remote)
+
+**Evaluate:** Run the full test suite with `pnpm turbo test:turbo --filter <package>` to confirm 100% coverage. Manually call the public API with invalid inputs (wrong types, missing fields, bad enum values) and verify that clear error messages are returned instead of crashes or silent failures.
 
 ---
 
